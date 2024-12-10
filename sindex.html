@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Animation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        .solar-system {
+            position: relative;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+        }
+
+        .sun {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .planet {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: white;
+            transform-origin: -100px;
+            animation: orbit 10s linear infinite;
+        }
+
+        .planet:nth-child(1) {
+            background-color: gray;
+            animation-duration: 4s;
+        }
+
+        .planet:nth-child(2) {
+            background-color: red;
+            animation-duration: 6s;
+        }
+
+        .planet:nth-child(3) {
+            background-color: orange;
+            animation-duration: 8s;
+        }
+
+        .planet:nth-child(4) {
+            background-color: blue;
+            animation-duration: 10s;
+        }
+
+        .planet:nth-child(5) {
+            background-color: lightgray;
+            animation-duration: 12s;
+        }
+
+        .planet:nth-child(6) {
+            background-color: green;
+            animation-duration: 14s;
+        }
+
+        .planet:nth-child(7) {
+            background-color: yellow;
+            animation-duration: 16s;
+        }
+
+        .planet:nth-child(8) {
+            background-color: darkblue;
+            animation-duration: 18s;
+        }
+
+        @keyframes orbit {
+            0% {
+                transform: rotate(0deg) translateX(100px) rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg) translateX(100px) rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="solar-system">
+    <div class="sun"></div>
+    <div class="planet"></div>
+    <div class="planet"></div>
+    <div class="planet"></div>
+    <div class="planet"></div>
+    <div class="planet"></div>
+    <div class="planet"></div>
+    <div class="planet"></div>
+    <div class="planet"></div>
+</div>
+
+</body>
+</html>
